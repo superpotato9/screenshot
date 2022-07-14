@@ -23,29 +23,43 @@
 </body>
 <header>
 
+  <div class="header">
 
-  <div style="display:inline-block; position:relative;  top:-10px ;">
-    <a href="http://superpotato9.com"><img  alt=" logo "src="potato.png" height="13%" width="13%" style=""></a>
-
-  </div>
-
-  <div style="display:inline-block;">
-
-    <h2 id="title">Tvdle</h2>
-  </div>
+      <a href="http://superpotato9.com"><img  id="logo" alt=" logo "src="potato.png" height="78vw" width="78vw" style="display: inline;   max-width: 100%;    "></a>
 
 
-<div style="display:inline-block; position:relative;  top:-10px; ">
-  <img src="question-mark.png" alt="question mark" height="55%" width="55%" style="">
+      <h1 id="title" style="display: inline; font-size: 200; font-family: 'URW Gothic'">Screenshot</h1>
 
-</div>
+
+    <img id="?" alt="help"src="question-mark.png"  height="48vw" width="48vw  " style="display: inline;  max-width: 50px  ; ">
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+  <!---<img src="question-mark.png" alt="question mark" height="7%" width="7%" style="display: inline;"> ----!>
+
+
 
 
 </header>
 
-<img onContextMenu="return false;" id= "main" src="tile.png" alt="main image if you cant see this then u cant play the game :("  width="50%">
+<img alt="maiimage if you cant see this then u cant play the game :(" id="main" onContextMenu="return false;"
+     src="tile.png" style="" width="300vw ">
 
+<br>
 
+<div class="input">
+<form autocomplete="off"><input type="text" name="q" id="q" onKeyUp="showResults(this.value)" style=""/>
+  <div id="result"></div>
+</form>
+</div>
 <script type="text/javascript" src="index.js"></script>
-<p> hello </p>
 </html>

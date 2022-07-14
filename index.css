@@ -1,22 +1,66 @@
 
 body{
+
+
   text-align: center;
   align-content: center;
   background-color: #555555;
 }
 
+.input{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 
-h2{
-  font-size: 45px;
+  display: inline-block;
 
+
+  text-overflow: ellipsis;
+
+  overflow: hidden;
+  #display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  background:#fff;
+  position:absolute;
+
+}
+header{
+  align-content: center;
+}
+img
+{ display: block;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+#result {
+
+    width: 15rem;
+  height: 5rem;
+
+  border: 1px dotted #ccc;
+  padding: 3px;
+  font-min-size: 20px;
   font-family: "URW Gothic";
-  text-align: center;
+
 }
+#result ul {
 
+  list-style-type: none;
+  padding: 0;
 
-
-
-main{
-  width: 50%;
 }
+#result ul li {
 
+  padding: 5px 0;
+
+
+}
+#result ul li:hover {
+
+  background: #eee;
+
+}
