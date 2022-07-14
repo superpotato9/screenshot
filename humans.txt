@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    nathan -- fullstack-dev -- nkoliha@gmail.com
+
+# THANKS
+
+    www.themoviedb.org
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, js
+    apache backend python3
+

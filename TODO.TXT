@@ -1,0 +1,21 @@
+list of things to do
+
+html/css:
+TODO: add image
+TODO: add boxes for answers
+TODO: add search box
+TODO: add footer
+TODO: add how to area
+
+js:
+TODO: make text box affect
+TODO: make search work
+TODO: answer checker
+TODO: answer wrong or right boxes
+TODO: connect them all
+
+
+far-out:
+TODO: save user stats in cookies
+TODO: you win message
+

@@ -1,0 +1,29 @@
+
+body{
+  text-align: center;
+  align-content: center;
+  background-color: #555555;
+}
+h2{
+  font-size: 45px;
+
+  font-family: "URW Gothic";
+  text-align: center;
+
+
+
+}
+
+
+.header
+{
+  height: auto;
+  width:80%;
+  padding: 0;
+  border: 1px solid;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+
+}
