@@ -12,5 +12,5 @@
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5, js
-    apache backend python3
+    apache backend via python3
 
