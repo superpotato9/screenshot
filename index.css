@@ -27,6 +27,7 @@ body{
 }
 header{
   align-content: center;
+
 }
 img
 { display: block;
@@ -50,4 +51,20 @@ img
   display: inline-block;
 
   cursor: pointer;
+}
+text.answer-boxes{
+  border-style: double;
+}
+
+
+#footer {
+  position: fixed;
+ align-content: center;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+
+  /* Height of the footer*/
+
+
 }
