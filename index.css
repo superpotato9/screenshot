@@ -36,34 +36,6 @@ img
 
 }
 
-#result {
-
-    width: 11rem;
-  height: 4.3rem;
-
-  border: 1px dotted #ccc;
-  padding: 3px;
-  font-min-size: 15px;
-  font-family: "URW Gothic";
-
-}
-#result ul {
-
-  list-style-type: none;
-  padding: 0;
-
-}
-#result ul li {
-
-  padding: 3px 0;
-
-
-}
-#result ul li:hover {
-
-  background: #555555;
-
-}
 
 .button {
   vertical-align: middle;
