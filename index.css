@@ -21,7 +21,7 @@ body{
   #display: -webkit-box;
   -webkit-line-clamp: 10;
   -webkit-box-orient: vertical;
-  background:#fff;
+  background:#555555;
   position:absolute;
 
 }
@@ -38,12 +38,12 @@ img
 
 #result {
 
-    width: 15rem;
-  height: 5rem;
+    width: 11rem;
+  height: 4.3rem;
 
   border: 1px dotted #ccc;
   padding: 3px;
-  font-min-size: 20px;
+  font-min-size: 15px;
   font-family: "URW Gothic";
 
 }
@@ -55,12 +55,27 @@ img
 }
 #result ul li {
 
-  padding: 5px 0;
+  padding: 3px 0;
 
 
 }
 #result ul li:hover {
 
-  background: #eee;
+  background: #555555;
 
+}
+
+.button {
+  vertical-align: middle;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  width: 5rem;
+  height: 30rem;
+  text-align: center;
+
+  text-decoration: none;
+  display: inline-block;
+
+  cursor: pointer;
 }
