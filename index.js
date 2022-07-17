@@ -28,3 +28,9 @@ function get_ans() {
 
   console.log(user_answer)
 }
+
+let box = document.querySelector('main');
+let width = box.offsetWidth;
+let height = box.offsetHeight;
+console.log(height);
+console.log(height);

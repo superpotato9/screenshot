@@ -6,7 +6,18 @@ body{
   align-content: center;
   background-color: #555555;
 }
+.image-container {
 
+  margin: auto;
+  display: block;
+ align-content: center;
+  max-width: 100px;
+  max-height:300px;
+  overflow:hidden;
+  background: royalblue;
+}
+
+}
 .input{
   position: absolute;
   left: 50%;
@@ -30,7 +41,9 @@ header{
 
 }
 img
-{ display: block;
+
+{
+  display: block;
   display: block;
   margin-left: auto;
   margin-right: auto;
