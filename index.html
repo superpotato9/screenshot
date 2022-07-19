@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+
   <link rel="stylesheet" href="index.css">
   <title>Tvidle - the tv show guessing game</title>
   <meta charset="utf-8">
@@ -19,8 +20,17 @@
 </head>
 
 <body>
+<Style id="image-style">.image-container {
 
-</body>
+  margin: auto;
+  display: block;
+  align-content: center;
+  overflow: hidden;
+
+
+}
+</Style>
+
 <header>
 
   <div class="header">
@@ -43,9 +53,9 @@
 
 </header>
 <br>
-<div class="image-container">
-<img alt="maiimage if you cant see this then u cant play the game :(" id="main" onContextMenu="return false;"
-     src="tile.png" style="" width="310vw">
+<div id="image-container" class="image-container">
+  <img alt="maiimage if you cant see this then u cant play the game :(" id="main" onContextMenu="return false;"
+       src="tile.png" style="" width="310vw">
 </div>
 
 <br>
@@ -56,9 +66,10 @@
 </div>
 <div class="input" style="">
 
+
   <form autocomplete="off" onSubmit="return false;">
 
-    <input onkeypress="get_ans()" type="search" list="dataset" id="answer" name="q"
+    <input type="search" list="dataset" id="answer" name="q"
            style=" vertical-align: middle; height: 42px;
    line-height: 42px;"/>
     <button type="button" class="button" style="vertical-align: middle; " onclick="get_ans()">Enter</button>
@@ -1451,6 +1462,8 @@
 </div>
 <!--<div id="footer"><p>Made with ❤️ by Nathan️</p></div>-->
 <script type="text/javascript" src="index.js"></script>
+
+</body>
 </html>
 
 

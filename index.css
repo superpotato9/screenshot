@@ -6,16 +6,6 @@ body{
   align-content: center;
   background-color: #555555;
 }
-.image-container {
-
-  margin: auto;
-  display: block;
- align-content: center;
-  max-width: 100px;
-  max-height:300px;
-  overflow:hidden;
-  background: royalblue;
-}
 
 
 .input{
