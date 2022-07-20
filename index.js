@@ -1,5 +1,5 @@
 // API for get requests
-//TODO: remove the answers
+
 
 fetchRes = fetch(
   "https:/superpotato9.com/tvdle/data");
@@ -9,7 +9,7 @@ fetchRes.then(res =>
   res.json()).then(d => {
   //console.log(d)
   element = d
-  console.log(element["title"]);
+
   release = element["release"];
   title = element['title'];
   poster = element["poster"];
@@ -23,10 +23,10 @@ fetchRes.then(res =>
   //document.getElementById("example").innerHTML =  element;
 
 // document.getElementById('image-container').style.width = "30px";
+  img_size = 10
 
-  document.getElementById("image-container").style.width = 10 + 'vw';
-  document.getElementById("image-container").style.height = 10 + 'vw';
-
+  document.getElementById("image-container").style.width = 10 + "em";
+  document.getElementById("image-container").style.height = 10 + "em";
 
 })
 chances = 6;
@@ -42,6 +42,10 @@ function get_ans() {
   } else {
     chances = chances - 1;
     console.log('wrong');
+    img_size = img_size + 5
+    document.getElementById("image-container").style.width = img_size + "em";
+    document.getElementById("image-container").style.height = img_size + "em";
+
 
   }
 }

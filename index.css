@@ -1,10 +1,21 @@
 
-body{
+body {
 
 
   text-align: center;
   align-content: center;
   background-color: #555555;
+}
+
+.image-container {
+
+  margin: auto;
+  display: block;
+
+  align-content: center;
+  overflow: hidden;
+
+
 }
 
 
@@ -62,20 +73,22 @@ text.answer-boxes{
 }
 
 
-
-
-
 #footer {
   position: fixed;
- align-content: center;
+  align-content: center;
   text-align: center;
   bottom: 0;
   width: 100%;
 
-
-  /* Height of the footer*/
-
+}
 
 
+#text {
+  border-style: dotted;
+  max-width: 50%;
+  text-align: center;
+  padding-left: 3%;
+  padding-right: 3%;
+  display: inline;
 }
 
