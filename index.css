@@ -84,11 +84,16 @@ text.answer-boxes{
 
 
 #text {
-  border-style: dotted;
-  max-width: 50%;
-  text-align: center;
-  padding-left: 3%;
-  padding-right: 3%;
-  display: inline;
+  font-size: 20px;
+  background-color: darkgrey;
+  border-style: solid;
+  width: 15vw, 7vw;
+  /*max-width: 50%;*/
+  /*padding-left: 5px;*/
+  /*padding-right: 5px;*/
+  display: table;
+  margin: 0 auto;
+
 }
+
 

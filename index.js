@@ -38,10 +38,12 @@ function get_ans() {
   console.log(user_answer)
   if (user_answer == title) {
     console.log('correct!')
+    document.getElementById("answer-boxes").insertAdjacentHTML("afterend", ' <p id="text" style="background-color: #4CAF50"> ' + user_answer + '</p> ')
 
   } else {
     chances = chances - 1;
     console.log('wrong');
+    document.getElementById("answer-boxes").insertAdjacentHTML("afterend", ' <p id="text"> <em style="color: red" > ✗   </em>' + user_answer + '</p> ')
     img_size = img_size + 5
     document.getElementById("image-container").style.width = img_size + "em";
     document.getElementById("image-container").style.height = img_size + "em";
