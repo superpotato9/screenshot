@@ -1,7 +1,6 @@
 
 body {
 
-
   text-align: center;
   align-content: center;
   background-color: #555555;
@@ -19,7 +18,8 @@ body {
 }
 
 
-.input{
+.input {
+  max-width: 50vw;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -41,9 +41,8 @@ header{
   align-content: center;
 
 }
-img
 
-{
+img {
   display: block;
   display: block;
   margin-left: auto;
@@ -51,20 +50,32 @@ img
 
 }
 
+form {
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+input {
+  display: block;
+  text-align: center;
+}
 
 .button {
-  vertical-align: middle;
+
   background-color: #4CAF50; /* Green */
   border: none;
+  font-size: .8rem;
   color: white;
-  width: 5rem;
-  height: 30rem;
-  height: 40px;
-  line-height: 40px;
+  width: 3rem;
+  height: 2rem;
+
+  /*line-height: 40px;*/
   text-align: center;
 
   text-decoration: none;
-  display: inline-block;
+  display: inline;
 
   cursor: pointer;
 }
