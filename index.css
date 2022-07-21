@@ -9,13 +9,21 @@ body {
 
 .image-container {
 
+  object-fit: cover;
   margin: auto;
   display: block;
-
+  position: static;
   align-content: center;
   overflow: hidden;
+  width: 50%;
+  margin: 0 auto;
 
 
+}
+
+#main {
+  border-style: solid;
+  border-width: 3px;
 }
 
 
@@ -50,6 +58,7 @@ header {
 }
 
 img {
+
   display: block;
   display: block;
   margin-left: auto;
@@ -93,15 +102,16 @@ text.answer-boxes {
 
 
 #text {
+
   flex: 1;
 
-  font-size: 1.1rem;
+  font-size: 17px;
   background-color: #ffffff;
   border-style: solid;
-  border-width: 0.3px;
+  border-width: 2px;
 
-  width: 100%;
-  max-width: 15vw;
+
+  max-width: 200px;
   /*max-width: 50%;*/
   /*padding-left: 5px;*/
   /*padding-right: 5px;*/
@@ -109,3 +119,4 @@ text.answer-boxes {
   margin: 0 auto;
 
 }
+

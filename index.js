@@ -17,8 +17,6 @@ fetchRes.then(res =>
 
   correct = false
 
-
-  // console.log(release, title, poster);
   document.getElementById("main").src = poster;
 
 
@@ -32,6 +30,11 @@ fetchRes.then(res =>
 
 })
 chances = 6;
+const button = document.querySelector('button')
+
+x = ''
+let real_chances = 6;
+
 function get_ans() {
 
 
@@ -42,21 +45,55 @@ function get_ans() {
   if (correct == false) {
     if (chances == 0) {
       console.log('u lose');
+      button.disabled = true
     }
     console.log(user_answer)
     if (user_answer == title) {
+      // x = x + '✓' ;
+      button.disabled = true
       console.log('correct!')
-      document.getElementById("answer-boxes").insertAdjacentHTML("afterend", ' <p id="text" style="border-color: #4CAF50"> ' + user_answer + '</p> ')
-      document.getElementById("image-container").style.width = 28 + "em";
+      document.getElementById("count").style.color = "green";
+      document.getElementById("count").style.fontSize = "40";
+      document.getElementById("count").innerHTML = x + "\t✅";
+
+
+      // document.getElementById("answer-boxes").insertAdjacentHTML("afterend", ' <p id="text" style="border-color: #4CAF50"> ' + user_answer + '</p> ')
+      document.getElementById("image-container").style.width = 22 + "em";
       document.getElementById("image-container").style.height = 28 + "em";
       correct = true
+
+
+// after this here we are calling both the function so it works
+      const start = () => {
+        setTimeout(function () {
+          confetti.start()
+        }, 1000); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+      };
+
+      //  for stopping the confetti
+
+      const stop = () => {
+        setTimeout(function () {
+          confetti.stop()
+        }, 5000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+      };
+      // console.log(release, title, poster);
+
+      start();
+      stop();
+
 
     } else {
       chances = chances - 1;
       console.log('wrong');
-      document.getElementById("answer-boxes").insertAdjacentHTML("afterend", ' <p id="text"  style="border-color: red"> ' + user_answer + '</p> ')
+      x = x + '❌'
+      document.getElementById("count").innerHTML = x;
+
+      real_chances = real_chances - 1;
       img_size = img_size + 3
-      document.getElementById("image-container").style.width = img_size + "em";
+      if (chances > 2) {
+        document.getElementById("image-container").style.width = img_size + "em";
+      }
       document.getElementById("image-container").style.height = img_size + "em";
 
 
