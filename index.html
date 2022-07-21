@@ -1,11 +1,13 @@
 <!doctype html>
+<meta charset="utf-8"/>
+
 <!--suppress CssInvalidPropertyValue -->
 <html lang="en">
 
 <head>
 
   <link rel="stylesheet" href="index.css">
-  <title>Tvidle - the tv show guessing game</title>
+  <title>screenshot - the tv show guessing game</title>
   <meta charset="utf-8">
   <title></title>
   <meta name="description" content="">
@@ -25,30 +27,50 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
   <div class="header">
 
-    <a href="https://superpotato9.com"><img id="logo" alt=" logo " src="potato.png" height="78vw" width="78vw"
-                                            style="display: inline;   max-width: 100%;    "></a>
+    <a href="https://superpotato9.com"><img id="logo" alt=" logo " src="potato.png" height="73vw" width="73vw"
+                                            style="display: inline;   max-width: 100%;  "></a>
 
 
     <!--suppress CssInvalidPropertyValue -->
-    <h1 id="title" style="display: inline; font-size: 200; font-family: 'URW Gothic'">Screenshot</h1>
+    <h1 id="title" style="display: inline; font-size: 200;  font-family: 'URW Gothic'">Screenshot</h1>
 
 
-    <img id="?" alt="help" src="question-mark.png" height="48vw" width="48vw  "
-         style="display: inline;  max-width: 50px  ; ">
+    <!--    <img id="?" alt="help" src="question-mark.png" height="48vw" width="48vw  " onclick="help()">-->
+    <p height="10vw" width="10vw  " style="display: inline;  font-size: 2rem;" id="?" onclick="help()">❓</p>
   </div>
 
-<!--<img src="question-mark.png" alt="question mark" height="7%" width="7%" style="display: inline;"> -->
+  <!--<img src="question-mark.png" alt="question mark" height="7%" width="7%" style="display: inline;"> -->
 
 
 </header>
 <br>
 <!--<div class="myGallery">-->
 <div id="image-container" class="image-container">
-  <img alt="maiimage if you cant see this then u cant play the game :(" id="main" onContextMenu="return false;"
+  <img alt="main image if you cant see this then u cant play the game :(" id="main" onContextMenu="return false;"
        src="tile.png" style="" width="310vw">
 
 </div>
 
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>How to play</h2>
+    <p>1. Look at fragment of the poster.</p>
+    <p>2. enter your guess of what tv the poster is from.</p>
+    <p>3. if your guess is wrong more of the poster is revealed and guess again.</p>
+    <br>
+    <h3>Credits</h3>
+    <p>Posters and show titles from <a href="https://www.themoviedb.org/?language=en-US">The Movie Database</a>. All
+      copyrights on posters go to their respective owners.</p>
+    <p>This project is made by <a href="nkoliha@gmail.com">Nathan</a> and released under the <a
+      href="https://choosealicense.com/licenses/mit/">Mit license.</a></p>
+
+  </div>
+
+</div>
 
 <div id="answer-boxes" class="answer-boxes">
   <p id="count"></p>
@@ -61,7 +83,7 @@
 
   <form id="form" autocomplete="off" onSubmit="return false;">
 
-    <input placeholder="The Shining" type="search" list="dataset" id="answer" class="answer" name="q"
+    <input placeholder="Put show name here" type="search" list="dataset" id="answer" class="answer" name="q"
            style=" vertical-align: middle; height: 42px;
    line-height: 42px;"/>
     <button type="button" class="button" style="vertical-align: middle; " onclick="get_ans()">Enter</button>
