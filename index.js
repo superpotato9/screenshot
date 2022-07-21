@@ -33,7 +33,12 @@ fetchRes.then(res =>
 })
 chances = 6;
 function get_ans() {
+
+
   var user_answer = document.getElementById("answer").value;
+  if (user_answer == '') {
+    user_answer = user_answer + '         '
+  }
   if (correct == false) {
     if (chances == 0) {
       console.log('u lose');
@@ -41,7 +46,7 @@ function get_ans() {
     console.log(user_answer)
     if (user_answer == title) {
       console.log('correct!')
-      document.getElementById("answer-boxes").insertAdjacentHTML("afterend", ' <p id="text" style="background-color: #4CAF50"> ' + user_answer + '</p> ')
+      document.getElementById("answer-boxes").insertAdjacentHTML("afterend", ' <p id="text" style="border-color: #4CAF50"> ' + user_answer + '</p> ')
       document.getElementById("image-container").style.width = 28 + "em";
       document.getElementById("image-container").style.height = 28 + "em";
       correct = true
@@ -49,7 +54,7 @@ function get_ans() {
     } else {
       chances = chances - 1;
       console.log('wrong');
-      document.getElementById("answer-boxes").insertAdjacentHTML("afterend", ' <p id="text"> <em style="color: red" > ✗   </em>' + user_answer + '</p> ')
+      document.getElementById("answer-boxes").insertAdjacentHTML("afterend", ' <p id="text"  style="border-color: red"> ' + user_answer + '</p> ')
       img_size = img_size + 3
       document.getElementById("image-container").style.width = img_size + "em";
       document.getElementById("image-container").style.height = img_size + "em";
@@ -57,5 +62,5 @@ function get_ans() {
 
     }
   }
-
+  document.getElementById('answer').value = ''; //clears value of text box
 }

@@ -84,10 +84,13 @@ text.answer-boxes{
 
 
 #text {
-  font-size: 20px;
-  background-color: darkgrey;
+  font-size: 1.3rem;
+  background-color: #555555;
   border-style: solid;
-  width: 15vw, 7vw;
+  border-width: .3px;
+
+
+  max-width: 14vw;
   /*max-width: 50%;*/
   /*padding-left: 5px;*/
   /*padding-right: 5px;*/
@@ -95,5 +98,3 @@ text.answer-boxes{
   margin: 0 auto;
 
 }
-
-
