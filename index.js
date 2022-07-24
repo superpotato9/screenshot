@@ -1,5 +1,22 @@
 // API for get requests
+function refreshAt(hours, minutes, seconds) {
+  var now = new Date();
+  var then = new Date();
 
+  if (now.getHours() > hours ||
+    (now.getHours() == hours && now.getMinutes() > minutes) ||
+    now.getHours() == hours && now.getMinutes() == minutes && now.getSeconds() >= seconds) {
+    then.setDate(now.getDate() + 1);
+  }
+  then.setHours(hours);
+  then.setMinutes(minutes);
+  then.setSeconds(seconds);
+
+  var timeout = (then.getTime() - now.getTime());
+  setTimeout(function () {
+    window.location.reload(true);
+  }, timeout);
+}
 
 fetchRes = fetch(
   "https:/superpotato9.com/tvdle/data");
@@ -42,7 +59,11 @@ won = localStorage.getItem('won');
 if (!played) {
   localStorage.setItem('played', 0)
 }
-
+if (!won) {
+  localStorage.setItem('won', 0)
+}
+won = localStorage.getItem('won');
+played = localStorage.getItem('played');
 let real_chances = 6;
 
 function get_ans() {
@@ -54,7 +75,7 @@ function get_ans() {
   }
   if (correct == false) {
     if (chances == 0) {
-      localStorage.setItem('played', parseInt(played) + '1');
+      localStorage.setItem('played', parseInt(played) + 1);
       console.log('u lose');
       button.disabled = true
     }
@@ -62,7 +83,7 @@ function get_ans() {
     if (user_answer == title) {
       // x = x + '✓' ;
       button.disabled = true
-
+      localStorage.setItem('won', 1 + parseInt(won));
       localStorage.setItem('played', 1 + parseInt(played));
       console.log('correct!')
       document.getElementById("count").style.color = "green";
@@ -123,7 +144,13 @@ function help() {
 function stat() {
   console.log('stats ')
   document.getElementById('stat-modal').style.display = "block";
+  won = localStorage.getItem('won');
+  played = localStorage.getItem('played');
   document.getElementById("played").innerHTML = played;
+  document.getElementById("won").innerHTML = won;
+  document.getElementById("win%").innerHTML = Math.round(won / played * 100) + '%';
+  document.getElementById("lost").innerHTML = parseInt(played) - parseInt(won);
+
 }
 
 
@@ -155,9 +182,11 @@ window.onclick = function (event) {
   }
   if (event.target == document.getElementById('stat-modal')) {
     document.getElementById('stat-modal').style.display = "none";
+
   }
 }
 
 if (localStorage.getItem('played') == 0) {
   help();
 }
+refreshAt(1, 5, 30);
