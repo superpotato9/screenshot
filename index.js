@@ -29,6 +29,7 @@ fetchRes.then(res =>
   document.getElementById("image-container").style.height = 10 + "em";
 
 })
+
 chances = 6;
 const button = document.querySelector('button')
 
