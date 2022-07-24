@@ -68,11 +68,13 @@
   <div class="modal-content">
     <span class="close">&times;</span>
     <h2>How to play</h2>
+    <hr>
     <p>1. Look at the fragment of the poster.</p>
     <p>2. enter your guess of what tv show the poster is from.</p>
     <p>3. if your guess is wrong more of the poster is revealed and guess again.</p>
     <br>
     <h3>Credits</h3>
+    <hr>
     <p>Posters and show titles from <a href="https://www.themoviedb.org/?language=en-US">The Movie Database</a>. All
       copyrights on posters go to their respective owners.</p>
     <p>This project is made by <a href="mailto:nkoliha@gmail.com">Nathan</a> and released under the <a
@@ -80,6 +82,7 @@
 
 
   </div>
+
 
 </div>
 
@@ -89,6 +92,7 @@
   <div class="stat-modal-content">
     <span id="stat-close" class="stat-close">&times;</span>
     <h2>Stats</h2>
+    <hr>
     <div id="stats" style="display: flex; justify-content: space-evenly">
 
       <p id="win%">0</p>
@@ -98,12 +102,17 @@
     </div>
     <div id="stat-names" style="display: flex; justify-content: space-evenly">
 
-      <p style="font-size: .9rem;">Win%</p>
-      <p style="font-size: .9rem;">Won</p>
-      <p style="font-size: .9rem;">Lost</p>
-      <p style="font-size: .9rem;">Played</p>
+      <p style="font-size: .9rem;"> Win%</p>
+      <p style="font-size: .9rem;"> Won</p>
+      <p style="font-size: .9rem;"> Lost</p>
+      <p style="font-size: .9rem;"> Played</p>
     </div>
-    <br>
+    <hr>
+    <p>Next game in:</p>
+    <p id="countdown"></p>
+
+    <hr>
+    <button id="share" class="share" onclick="share()">Share</button>
     <br>
   </div>
 </div>
