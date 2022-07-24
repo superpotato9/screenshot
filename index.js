@@ -120,6 +120,13 @@ function help() {
   modal.style.display = "block";
 }
 
+function stat() {
+  console.log('stats ')
+  document.getElementById('stat-modal').style.display = "block";
+  document.getElementById("played").innerHTML = played;
+}
+
+
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
@@ -135,12 +142,19 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function () {
   modal.style.display = "none";
 }
+document.getElementById('stat-close').onclick = function () {
+
+  document.getElementById('stat-modal').style.display = "none";
+}
 
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
+  }
+  if (event.target == document.getElementById('stat-modal')) {
+    document.getElementById('stat-modal').style.display = "none";
   }
 }
 

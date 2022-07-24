@@ -68,8 +68,8 @@ var confetti = {
   }
 
   function runAnimation() {
-    if (pause)
-      return;
+    if (pause) ;
+
     else if (particles.length === 0) {
       context.clearRect(0, 0, window.innerWidth, window.innerHeight);
       animationTimer = null;
