@@ -33,10 +33,18 @@ chances = 6;
 const button = document.querySelector('button')
 
 x = ''
+let played;
+played = localStorage.getItem('played');
+let won
+won = localStorage.getItem('won');
+
+if (!played) {
+  localStorage.setItem('played', 0)
+}
+
 let real_chances = 6;
 
 function get_ans() {
-
 
 
   var user_answer = document.getElementById("answer").value;
@@ -45,7 +53,7 @@ function get_ans() {
   }
   if (correct == false) {
     if (chances == 0) {
-
+      localStorage.setItem('played', parseInt(played) + '1');
       console.log('u lose');
       button.disabled = true
     }
@@ -53,6 +61,8 @@ function get_ans() {
     if (user_answer == title) {
       // x = x + '✓' ;
       button.disabled = true
+
+      localStorage.setItem('played', 1 + parseInt(played));
       console.log('correct!')
       document.getElementById("count").style.color = "green";
       document.getElementById("count").style.fontSize = "40";
@@ -131,4 +141,8 @@ window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+}
+
+if (localStorage.getItem('played') == 0) {
+  help();
 }

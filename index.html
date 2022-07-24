@@ -5,7 +5,7 @@
 <html lang="en">
 
 <head>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" href="index.css">
   <title>screenshot - the tv show guessing game</title>
   <meta charset="utf-8">
@@ -32,11 +32,20 @@
 
 
     <!--suppress CssInvalidPropertyValue -->
-    <h1 id="title" style="display: inline; font-size: 200;  font-family: 'URW Gothic'">Screenshot</h1>
+    <h1 id="title" style=" max-width: 100%; display: inline; font-size: 200; font-family: 'URW Gothic'">Screenshot</h1>
 
 
     <!--    <img id="?" alt="help" src="question-mark.png" height="48vw" width="48vw  " onclick="help()">-->
-    <p height="10vw" width="10vw  " style="display: inline;  font-size: 2rem;" id="?" onclick="help()">❓</p>
+    <svg onclick="help()" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+         class="bi bi-question-lg" style="max-width: 100%;" viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+            d="M4.475 5.458c-.284 0-.514-.237-.47-.517C4.28 3.24 5.576 2 7.825 2c2.25 0 3.767 1.36 3.767 3.215 0 1.344-.665 2.288-1.79 2.973-1.1.659-1.414 1.118-1.414 2.01v.03a.5.5 0 0 1-.5.5h-.77a.5.5 0 0 1-.5-.495l-.003-.2c-.043-1.221.477-2.001 1.645-2.712 1.03-.632 1.397-1.135 1.397-2.028 0-.979-.758-1.698-1.926-1.698-1.009 0-1.71.529-1.938 1.402-.066.254-.278.461-.54.461h-.777ZM7.496 14c.622 0 1.095-.474 1.095-1.09 0-.618-.473-1.092-1.095-1.092-.606 0-1.087.474-1.087 1.091S6.89 14 7.496 14Z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" style="max-width: 100%;"
+         class="bi bi-bar-chart-line-fill" viewBox="0 0 16 16">
+      <path
+        d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2z"/>
+    </svg>
   </div>
 
   <!--<img src="question-mark.png" alt="question mark" height="7%" width="7%" style="display: inline;"> -->
@@ -58,15 +67,26 @@
   <div class="modal-content">
     <span class="close">&times;</span>
     <h2>How to play</h2>
-    <p>1. Look at fragment of the poster.</p>
-    <p>2. enter your guess of what tv the poster is from.</p>
+    <p>1. Look at the fragment of the poster.</p>
+    <p>2. enter your guess of what tv show the poster is from.</p>
     <p>3. if your guess is wrong more of the poster is revealed and guess again.</p>
     <br>
     <h3>Credits</h3>
     <p>Posters and show titles from <a href="https://www.themoviedb.org/?language=en-US">The Movie Database</a>. All
       copyrights on posters go to their respective owners.</p>
-    <p>This project is made by <a href="nkoliha@gmail.com">Nathan</a> and released under the <a
+    <p>This project is made by <a href="mailto:nkoliha@gmail.com">Nathan</a> and released under the <a
       href="https://choosealicense.com/licenses/mit/">Mit license.</a></p>
+
+
+  </div>
+
+</div>
+
+<div id="stat-modal" class="stat-modal">
+
+  <!-- Modal content -->
+  <div class="stat-modal-content">
+
 
   </div>
 
@@ -1476,6 +1496,7 @@
 
 
 </div>
+<footer id="footer"><p><a href="https://www.buymeacoffee.com/nkoliha">buy me a coffee</a></p></footer>
 <script src="confetti.js"></script>
 <!--<div id="footer"><p>Made with ❤️ by Nathan️</p></div>-->
 <script type="text/javascript" src="index.js"></script>

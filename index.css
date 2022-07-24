@@ -1,3 +1,18 @@
+@media (max-height: 667px) {
+  #footer {
+    display: none;
+  }
+}
+
+#footer {
+  font-family: "URW Gothic";
+  position: fixed;
+  align-content: center;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+
+}
 
 body {
 
@@ -48,6 +63,10 @@ body {
 }
 
 header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: center;
   align-content: center;
 
 }
@@ -90,16 +109,6 @@ text.answer-boxes {
   border-style: double;
   border-radius: 25px;
   padding: 10%;
-}
-
-
-#footer {
-  position: fixed;
-  align-content: center;
-  text-align: center;
-  bottom: 0;
-  width: 100%;
-
 }
 
 
