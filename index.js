@@ -1,4 +1,5 @@
 // API for get requests
+
 function refreshAt(hours, minutes, seconds) {
   var now = new Date();
   var then = new Date();
@@ -55,6 +56,8 @@ let played;
 played = localStorage.getItem('played');
 let won
 won = localStorage.getItem('won');
+const cur_date = new Date();
+
 
 if (!played) {
   localStorage.setItem('played', 0)
@@ -80,6 +83,7 @@ function get_ans() {
       document.getElementById("message").innerHTML = 'Answer: ' + title;
       button.disabled = true
       stat('better luck next time')
+      localStorage.setItem('last', cur_date.getDate());
     }
     console.log(user_answer)
     if (user_answer == title) {
@@ -88,6 +92,7 @@ function get_ans() {
       document.getElementById("message").innerHTML = 'spot on'
       localStorage.setItem('won', 1 + parseInt(won));
       localStorage.setItem('played', 1 + parseInt(played));
+      localStorage.setItem('last', cur_date.getDate());
       console.log('correct!')
       document.getElementById("count").style.color = "green";
       document.getElementById("count").style.fontSize = "40";
@@ -144,6 +149,14 @@ function help() {
   modal.style.display = "block";
 }
 
+if (parseInt(localStorage.getItem('last')) == cur_date.getDate()) {
+  document.getElementById('main-button').onclick = '';
+  console.log(true)
+  stat()
+  document.getElementById("image-container").style.width = 22 + "em";
+  document.getElementById("image-container").style.height = 28 + "em";
+
+}
 function stat(data) {
 
 
@@ -222,3 +235,6 @@ function share() {
   navigator.clipboard.writeText('https://superpotato9.com/screenshot')
   document.getElementById('share').innerHTML = "Copied"
 }
+
+const d = new Date();
+

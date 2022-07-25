@@ -5,6 +5,9 @@
 <html lang="en">
 
 <head>
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" href="index.css">
   <title>screenshot - the tv show guessing game</title>
@@ -136,7 +139,8 @@
     <input placeholder="Put show name here" type="search" list="dataset" id="answer" class="answer" name="q"
            style=" vertical-align: middle; height: 42px;
    line-height: 42px;"/>
-    <button type="button" class="button" style="vertical-align: middle; " onclick="get_ans()">Enter</button>
+    <button type="button" id='main-button' class="button" style="vertical-align: middle; " onclick="get_ans()">Enter
+    </button>
     <div id="result"></div>
 
   </form>
