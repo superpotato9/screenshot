@@ -77,12 +77,15 @@ function get_ans() {
     if (chances == 0) {
       localStorage.setItem('played', parseInt(played) + 1);
       console.log('u lose');
+      document.getElementById("message").innerHTML = 'Answer: ' + title;
       button.disabled = true
+      stat('better luck next time')
     }
     console.log(user_answer)
     if (user_answer == title) {
       // x = x + '✓' ;
       button.disabled = true
+      document.getElementById("message").innerHTML = 'spot on'
       localStorage.setItem('won', 1 + parseInt(won));
       localStorage.setItem('played', 1 + parseInt(played));
       console.log('correct!')
@@ -141,7 +144,9 @@ function help() {
   modal.style.display = "block";
 }
 
-function stat() {
+function stat(data) {
+
+
   console.log('stats ')
   document.getElementById('stat-modal').style.display = "block";
   won = localStorage.getItem('won');

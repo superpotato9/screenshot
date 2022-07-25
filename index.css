@@ -1,8 +1,4 @@
-@media (max-height: 667px) {
-  #footer {
-    display: none;
-  }
-}
+
 
 #footer {
   font-family: "URW Gothic";
@@ -68,6 +64,7 @@ header {
   justify-content: center;
   vertical-align: center;
   align-content: center;
+
 
 }
 
@@ -207,7 +204,7 @@ text.answer-boxes {
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
   /*padding: 20px;*/
-  height: 550px;
+  height: 580px;
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
 }
@@ -257,4 +254,23 @@ text.answer-boxes {
 .share:active {
   box-shadow: #D6D6E7 0 3px 7px inset;
   transform: translateY(2px);
+}
+
+#message {
+  font-family: "URW Gothic";
+  font-size: 1.8rem;
+}
+
+@media (max-height: 740px) {
+  #footer {
+    display: none;
+  }
+
+  #message {
+    font-size: 1.2rem;
+  }
+
+  .image-container {
+    max-height: 24rem;
+  }
 }
