@@ -150,11 +150,12 @@ function help() {
 }
 
 if (parseInt(localStorage.getItem('last')) == cur_date.getDate()) {
-  document.getElementById('main-button').onclick = '';
+    document.getElementById('main-button').onclick = stat();
   console.log(true)
   stat()
   document.getElementById("image-container").style.width = 22 + "em";
   document.getElementById("image-container").style.height = 28 + "em";
+  document.getElementById('main-button').style.color = '#327735';
 
 }
 function stat(data) {
@@ -198,7 +199,7 @@ document.getElementById('stat-close').onclick = function () {
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == modal) {
-    modal.style.display = "none";
+    document.getElementById('myModal').style.display = "none";
   }
   if (event.target == document.getElementById('stat-modal')) {
     document.getElementById('stat-modal').style.display = "none";
@@ -228,7 +229,6 @@ setInterval(function () {
   div.innerHTML = result;
 
 }, 1000);
-
 refreshAt(1, 5, 30);
 
 function share() {
