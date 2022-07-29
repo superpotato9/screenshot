@@ -15,7 +15,7 @@ function refreshAt(hours, minutes, seconds) {
 
   var timeout = (then.getTime() - now.getTime());
   setTimeout(function () {
-    window.location.reload(true);
+    window.location.reload();
   }, timeout);
 }
 
@@ -28,10 +28,12 @@ fetchRes.then(res =>
   //console.log(d)
   element = d
 
+  oldelem = element;
   release = element["release"];
   title = element['title'];
   poster = element["poster"];
   answer = title;
+  // poster = 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/prGylxnFpIWMcvHh9sUC46hmiIC.jpg'
 
   correct = false
 
@@ -70,7 +72,18 @@ played = localStorage.getItem('played');
 let real_chances = 6;
 
 function get_ans() {
+  fetchRes = fetch(
+    "https:/superpotato9.com/tvdle/data");
+  // fetchRes is the promise to resolve
+  // it by using.then() method
+  fetchRes.then(res =>
+    res.json()).then(d => {
+    //console.log(d)
+    if (oldelem != element) {
+      window.location.reload();
+    }
 
+  })
 
   var user_answer = document.getElementById("answer").value;
   if (user_answer == '') {
@@ -143,6 +156,7 @@ function get_ans() {
   }
   document.getElementById('answer').value = ''; //clears value of text box
 }
+
 
 function help() {
   console.log('help ')
